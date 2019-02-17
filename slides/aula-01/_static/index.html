@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>SPLN</title>
+        <link rel="stylesheet" href="./css/reveal.css">
+        <link rel="stylesheet" href="https://cdn.rawgit.com/andrefs/reveal-themes/256ab2ac/css/theme/merino.css" id="theme">
+        <link rel="stylesheet" href="./css/highlight/zenburn.css">
+        <link rel="stylesheet" href="./css/print/paper.css" type="text/css" media="print">
+          <link rel="stylesheet" href="./_assets/style.css">
+
+
+    </head>
+    <body>
+
+        <div class="reveal">
+            <div class="slides"><section  data-markdown><script type="text/template">
+# SPLN</script></section><section  data-markdown><script type="text/template">
+## André Santos
+
+MAP-i, FCUP, INESC-TEC
+
+<afs@inesctec.pt>
+
+[github.com/andrefs](http://github.com/andrefs)
+
+## José João Almeida
+
+GEPL, DI, UMinho, Algoritmi
+
+<jj@di.uminho.pt>
+
+[natura.di.uminho.pt/~jj](http://natura.di.uminho.pt/~jj)
+</script></section><section  data-markdown><script type="text/template">
+## Scripting no Processamento da Linguagem Natural
+
+Utilização de linguagens de scripting para o desenvolvimento e
+integração de ferramentas de PLN.
+</script></section><section  data-markdown><script type="text/template">
+## Conteúdos
+
+* Introdução ao Python
+* Scripting
+* Expressões regulares
+* Engenharia linguística
+* Corpora
+* Gramática do Português
+* Estratégias de parsing
+* Semântica
+* Terminologia
+* Dicionários e enciclopédias
+</script></section><section  data-markdown><script type="text/template">
+## Aulas
+
+
+* Python &ge; 3.6
+* Git
+* Unix
+* Terminal
+* Teoria + prática
+</script></section><section  data-markdown><script type="text/template">
+## Aulas
+
+* [github.com/andrefs/spln-docs](https://github.com/andrefs/spln-docs)
+  * `bibliografia`
+  * `slides`
+* [github.com/andrefs/spln-2018-i](https://github.com/andrefs/spln-2018-i)
+  * `aulas`
+  * `data`
+  * `usr`
+</script></section><section  data-markdown><script type="text/template">
+## Alunos
+</script></section><section  data-markdown><script type="text/template">
+## Avaliação
+
+* 2 ou 3 trabalhos práticos
+* 1 teste escrito
+* Alguns TPCs
+</script></section><section  data-markdown><script type="text/template">
+## Github
+
+* Criar conta
+  * https://github.com/join
+
+* Pedir Student Pack
+  * https://education.github.com/pack
+
+* Adicionar em
+  * https://goo.gl/7DnCxC
+
+</script></section><section  data-markdown><script type="text/template">
+## Micro introdução ao Git
+
+* `git init`
+* `git add`
+* `git commit`
+* `git pull`
+* `git push`
+</script></section><section  data-markdown><script type="text/template">
+## Mini introdução ao Python
+
+    #!/usr/bin/python3
+
+    print("Hello World")
+
+    editor = input("What is your favorite text editor? ")
+
+    a = [3, 6, 7, 2, 5, 9, 4, 0, 10]
+
+    for i in a:
+      if i < 5:
+        print(str(i) + " is lower than 5")
+      elif i > 5:
+        print(str(i) + " is higher than 5")
+      else:
+        print("FIVE!")
+
+    # comment
+</script></section><section  data-markdown><script type="text/template">## Listas
+
+
+    list = []
+    teams = ['slb', 'scp', 'fcp']
+
+    teams.append('scb')
+    teams.extend(['bfc', 'mfcf'])
+    teams.insert(3, 'vfc')
+
+    teams.remove('slb')
+    teams.pop(3)
+    del teams[2]
+    teams[1] = 'lsc'
+
+    teams.index('fcp')
+    teams.count('scp')
+</script></section><section  data-markdown><script type="text/template">## Dicionários
+
+
+    dict = {}
+    colors = {'fcp': 'blue', 'slb': 'red', 'scp': 'green'}
+    len(colors)
+    'slb' in colors
+    colors.get('aca', 'Não existe')
+
+    colors.keys()
+    colors.values()
+    colors.items()
+
+</script></section><section  data-markdown><script type="text/template">## Funções e listas por compreensão
+
+
+    import datetime
+
+    def timestamp():
+      print(datetime.datetime.now())
+
+    def repeat(str, n):
+      return str * n
+
+    words = ['quem', 'como', 'quais']
+    repetitions = [repeat(word, 2) for word in words]
+</script></section><section  data-markdown><script type="text/template">## Ler ficheiros
+
+
+    i=0
+    for line in open('file.txt').readlines():
+      i=i+1
+
+    print(str(i) + ' lines')
+</script></section><section  data-markdown><script type="text/template">## Exercícios
+<!-- .slide: class="condensed" -->
+
+1. Programa que pergunta ao utilizador o nome e imprime em maiúsculas.
+1. Função que recebe array de números e imprime números pares.
+1. Função que recebe nome de ficheiro e imprime linhas do ficheiro em
+   ordem inversa.
+1. Função que recebe um texto como argumento e "limpa-o": separa palavras e pontuação com espaços,
+   converte para minúsculas, remove acentuação de caracteres, etc.
+1. Função que recebe nome de ficheiro e imprime número de ocorrências
+   das 10 palavras mais frequentes no ficheiro.
+</script></section><section  data-markdown><script type="text/template">## Referências
+<!-- .slide: class="condensed" -->
+
+### Git
+* http://rogerdudler.github.io/git-guide/
+* https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf
+
+### Python
+* https://www.practicepython.org/
+* https://www.python.org/dev/peps/pep-0008/
+
+</script></section></div>
+        </div>
+
+        <script src="./lib/js/head.min.js"></script>
+        <script src="./js/reveal.js"></script>
+
+        <script>
+            function extend() {
+              var target = {};
+              for (var i = 0; i < arguments.length; i++) {
+                var source = arguments[i];
+                for (var key in source) {
+                  if (source.hasOwnProperty(key)) {
+                    target[key] = source[key];
+                  }
+                }
+              }
+              return target;
+            }
+
+            // Optional libraries used to extend on reveal.js
+            var deps = [
+              { src: './lib/js/classList.js', condition: function() { return !document.body.classList; } },
+              { src: './plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+              { src: './plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+              { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+              { src: './plugin/zoom-js/zoom.js', async: true },
+              { src: './plugin/notes/notes.js', async: true },
+              { src: './plugin/math/math.js', async: true }
+            ];
+
+            // default options to init reveal.js
+            var defaultOptions = {
+              controls: true,
+              progress: true,
+              history: true,
+              center: true,
+              transition: 'default', // none/fade/slide/convex/concave/zoom
+              dependencies: deps
+            };
+
+            // options from URL query string
+            var queryOptions = Reveal.getQueryHash() || {};
+
+            var options = {"transition":"fade"};
+            options = extend(defaultOptions, options, queryOptions);
+        </script>
+
+
+        <script>
+          Reveal.initialize(options);
+        </script>
+    </body>
+</html>

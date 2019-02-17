@@ -1,0 +1,80 @@
+
+
+
+
+Teaching team
+
+    André Santos
+    afs@inesctec.pt
+
+    José João Almeida
+    jj@di.uminho.pt
+
+    Bruno
+
+    Álvaro Iriarte
+    alvaro@ilch.uminho.pt
+
+Usual workflow
+    Collection
+    Pre-processing
+    Analysis
+    Visualization
+
+
+Sources
+    ontologies
+    dictionaries
+    web
+        wikipedia,
+        news websites,
+        hemerotecas,
+        public datasets
+            https://github.com/awesomedata/awesome-public-datasets
+        \dots
+    books
+    pre-compiled data: Pordata, INE, dados.gov
+    any text document(s)?
+
+Visualization elements
+    maps
+    word clouds
+    charts
+    graphs (networks)
+    
+    
+    
+    infographics
+
+
+Tools and technologies
+
+    Tableau
+    Google Sheets
+    Python
+    Command line tools: wget, curl, cut, \dots
+    Google Maps
+    Graphviz
+    Sublime Text
+    \dots
+
+
+Getting decent tools on Windows
+    https://tutorials.ubuntu.com/tutorial/tutorial-ubuntu-on-windows
+    chocolatey
+    VM
+    dual boot
+    https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/
+
+
+
+    
+which charts are appropriate to show which type of information
+what information am I trying to show
+what story am I telling
+what does a chart say, and is it useful?
+
+
+
+
+

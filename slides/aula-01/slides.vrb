@@ -1,0 +1,8 @@
+\frametitle{Ler ficheiros}
+\begin{minted}{python}
+i=0
+for line in open('file.txt').readlines():
+  i=i+1
+
+print(str(i) + ' lines')
+\end{minted}
